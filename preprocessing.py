@@ -60,9 +60,11 @@ def move_image(source, img_class):
 
 
 def split_to_folders():
-    #Get the data
+    #Split the dataset into corresponding classes -- malignant, benign, undefined and saves on data directory.
+    
+    #Get the data cluster dictionary from helper file.
     data_paths = create_data_clusters()
-    #Split the data into corresponding classes -- malignant, benign, undefined
+    
 
     for idx, data, in data_paths.items():
         if data["annot"+str(idx)] != [] and data["img"+str(idx)] != []:
@@ -90,6 +92,8 @@ def split_to_folders():
                 pass
 
 def save_processed_images():
+    #Crop the images and save them on processed image directory.
+
     os.chdir(PROCESSED_MALIGNANT_PATH)
     for img_name in os.listdir(MALIGNANT_PATH):
         malig_img =cv2.imread(os.path.join(MALIGNANT_PATH,img_name))
@@ -105,7 +109,7 @@ def save_processed_images():
 
 
 def main():
-    #Create split into classes - Benign or Malignant
+    
     create_folder()
     split_to_folders()
     save_processed_images()
