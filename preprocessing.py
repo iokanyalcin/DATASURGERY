@@ -111,20 +111,6 @@ def main():
     save_processed_images()
     
 
-
-
-    
-    
-    
-    #img = random.choice(os.listdir(MALIGNANT_PATH))
-    #img = Image.open(os.path.join(MALIGNANT_PATH,img))
-    #img = cv2.imread(os.path.join(MALIGNANT_PATH,img))
-    #cropped_img = img[6:308,85:470]
-    #cv2.imshow("img", cropped_img)
-    #cv2.imshow("img2", img)
-    #cv2.waitKey(0)
-
-    
     
 
 
