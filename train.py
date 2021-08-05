@@ -79,5 +79,5 @@ res_model.compile(optimizer=tf.keras.optimizers.Adam(lr=base_learning_rate),
 history_res = res_model.fit(train_datagen,epochs=1,batch_size= BATCH_SIZE)
 
 
-print("Here")
+
 res_model.evaluate(train_datagen)
